@@ -3,8 +3,9 @@ Description=Flask app service
 After=network.target
 
 [Service]
-WorkingDirectory=/home/ivasiluk/app
-ExecStart=/home/ivasiluk/app/venv/bin/pithon -m gunicorn -b 0.0.0.0:25000 -w 4
+WorkingDirectory=/home/ivasiluk/app3
+Environment-FLASK_APP=app.py
+ExecStart=/home/ivasiluk/app/venv/bin/pithon -m flask run -h 0.0.0.0 -p 25000
 
 [Install]
 WantedBy=multi-user.target
