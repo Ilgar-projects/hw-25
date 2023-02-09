@@ -3,7 +3,7 @@ Description=Flask app service
 After=network.target
 
 [Service]
-WorkingDirectory=/home/ivasiluk/app3
+WorkingDirectory=/home/ivasiluk/app
 Environment-FLASK_APP=app.py
 ExecStart=/home/ivasiluk/app/venv/bin/pithon -m flask run -h 0.0.0.0 -p 25000
 
