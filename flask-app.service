@@ -4,8 +4,8 @@ After=network.target
 
 [Service]
 WorkingDirectory=/home/ivasiluk/app
-Environment-FLASK_APP=app.py
-ExecStart=/home/ivasiluk/app/venv/bin/pithon -m flask run -h 0.0.0.0 -p 25000
+Environment=FLASK_APP=app.py
+ExecStart=/home/ivasiluk/app/venv/bin/python -m flask run -h 0.0.0.0 -p 25000
 
 [Install]
 WantedBy=multi-user.target
